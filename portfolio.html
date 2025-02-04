@@ -13,30 +13,59 @@
     </head>
     <body class=""> 
 
-        <!-- Nav Bar -->
-        <div class="flex justify-center content-center items-center text-xl mx-42 border-blue-100">
-            <a id="home_link" href="index.html" class="px-4 rounded-b-3xl py-4 hover:text-blue-800 ">
-                Home
-            </a>
-            <a href="about.html" class="px-4  rounded-b-3xl py-4 hover:text-blue-800">
-                About Us
-            </a>
-            <a href="team.html" class="px-4  rounded-b-3xl py-4 hover:text-blue-800">
-                Our Team
-            </a>
-            <a href="contact.html" class="px-4 rounded-b-3xl py-4 hover:text-blue-800">
-                Contact Us
-            </a>
-            <a href="Portfolio.html" class="px-4  rounded-b-3xl py-4 hover:text-blue-800 shadow-xl bg-blue-400 text-white">
-                Portfolio
-            </a>
-            <a href="https://egcss.com" target="_blank" class="px-4  rounded-b-3xl py-4 hover:text-blue-800">
-                EGCSS Kuwait
-            </a>
-            <a href="https://egcss.net" target="_blank" class="px-4  rounded-b-3xl py-4 hover:text-blue-800">
-                EGCSS USA
-            </a>
-        </div>
+
+        <!-- Navbar -->
+        <nav class="bg-blue-400 shadow-md mx-4 mt-4 rounded-2xl">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo / Home Link -->
+                    <div class="flex-shrink-0">
+                        <a id="home_link" href="index.html" class="text-white text-xl font-bold">
+                            Home
+                        </a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="md:hidden">
+                        <button id="menu-btn" class="text-white focus:outline-none">
+                            <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Menu Items (Hidden on mobile, shown on larger screens) -->
+                    <div class="hidden md:flex space-x-6">
+                        <a href="about.html" class="text-white hover:text-blue-200 transition duration-300">About Us</a>
+                        <a href="team.html" class="text-white hover:text-blue-200 transition duration-300">Our Team</a>
+                        <a href="contact.html" class="text-white hover:text-blue-200 transition duration-300">Contact Us</a>
+                        <a href="Portfolio.html" class="text-blue-800 font-bold hover:text-blue-200 transition duration-300">Portfolio</a>
+                        <a href="https://egcss.com" target="_blank" class="text-white hover:text-blue-200 transition duration-300">EGCSS Kuwait</a>
+                        <a href="https://egcss.net" target="_blank" class="text-white hover:text-blue-200 transition duration-300">EGCSS USA</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 bg-blue-500 px-4 py-2">
+                <a href="about.html" class="text-white hover:text-blue-200 transition duration-300">About Us</a>
+                <a href="team.html" class="text-white hover:text-blue-200 transition duration-300">Our Team</a>
+                <a href="contact.html" class="text-white hover:text-blue-200 transition duration-300">Contact Us</a>
+                <a href="Portfolio.html" class="text-white hover:text-blue-200 transition duration-300">Portfolio</a>
+                <a href="https://egcss.com" target="_blank" class="text-white hover:text-blue-200 transition duration-300">EGCSS Kuwait</a>
+                <a href="https://egcss.net" target="_blank" class="text-white hover:text-blue-200 transition duration-300">EGCSS USA</a>
+            </div>
+        </nav>
+
+        <!-- JavaScript for Mobile Menu -->
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
 
         <section class="text-left text-6xl  mt-10 mx-52">
             <h1 class="">
