@@ -9,13 +9,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/png" href="statics/images/smifid_logo.jpg">    
+        <link rel="icon" type="image/png" href="statics/images/smifid_logo.jpg">
+        <style>
+        </style>
     </head>
     <body class=""> 
 
 
         <!-- Navbar -->
-        <nav class="bg-blue-900 shadow-md mx-4 mt-4 py-1 rounded-2xl">
+        <nav class="w-full bg-blue-900 shadow-md mt-4 py-1 rounded-2xl z-30 relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo / Home Link -->
@@ -36,23 +38,22 @@
 
                     <!-- Menu Items (Hidden on mobile, shown on larger screens) -->
                     <div class="hidden md:flex space-x-6 font-bold text-white">
-                        <a href="index.html" class="text-white p-2  hover:animate-pulse transition duration-300">Home</a>
-                        <a href="about.html" class="text-blue-800 bg-white rounded-xl  p-2 hover:animate-pulse transition duration-300">About Us</a>
-                        <a href="team.html" class="text-white  p-2 hover:animate-pulse transition duration-300">Our Team</a>
-                        <a href="contact.html" class="text-white  p-2 hover:animate-pulse transition duration-300">Contact Us</a>
-                        <a href="Portfolio.html" class="text-white  p-2 hover:animate-pulse transition duration-300">Portfolio</a>
+                        <a href="index.html" class="text-white p-2 hover:animate-pulse transition duration-300">Home</a>
+                        <a href="about.html" class="text-blue-800 bg-white rounded-xl p-2 hover:animate-pulse transition duration-300">About Us</a>
+                        <a href="team.html" class="text-white p-2 hover:animate-pulse transition duration-300">Our Team</a>
+                        <a href="contact.html" class="text-white p-2 hover:animate-pulse transition duration-300">Contact Us</a>
+                        <a href="Portfolio.html" class="text-white p-2 hover:animate-pulse transition duration-300">Portfolio</a>
                     </div>
                 </div>
             </div>
 
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 bg-blue-500 px-4 py-2">
-                <a href="index.html" class="text-white  hover:animate-pulse transition duration-300">Home</a>
-                <a href="about.html" class="text-white  hover:animate-pulse transition duration-300">About Us</a>
-                <a href="team.html" class="text-white  hover:animate-pulse transition duration-300">Our Team</a>
-                <a href="contact.html" class="text-white  hover:animate-pulse transition duration-300">Contact Us</a>
-                <a href="Portfolio.html" class="text-white  hover:animate-pulse transition duration-300">Portfolio</a>
-                
+                <a href="index.html" class="text-white hover:animate-pulse transition duration-300">Home</a>
+                <a href="about.html" class="text-white hover:animate-pulse transition duration-300">About Us</a>
+                <a href="team.html" class="text-white hover:animate-pulse transition duration-300">Our Team</a>
+                <a href="contact.html" class="text-white hover:animate-pulse transition duration-300">Contact Us</a>
+                <a href="Portfolio.html" class="text-white hover:animate-pulse transition duration-300">Portfolio</a>
             </div>
         </nav>
 
@@ -66,44 +67,62 @@
             });
         </script>
 
-        <div class="flex justify-center content-center items-center w-full h-[70vh] rounded-2xl">
-            <img class="h-[70vh] w-auto" src="statics/images/smifid_logo.jpg">
+
+        <!-- Main Page Logo & Animation -->
+        <div class="relative w-full h-[70vh] overflow-hidden">
+            <!-- Logo container -->
+            <div class="absolute inset-0 flex items-center justify-center z-20 p-4">
+                <img class="w-3/4 sm:w-1/2 lg:w-1/3 slideAni max-w-full max-h-full slideAni" 
+                    src="statics/images/smifid_logo.jpg" 
+                    alt="VFSA Logo">
+            </div>
         </div>
 
-
-
-        <section class="flex flex-col mt-3 mx-16 gap-y-3 text-lg">
-            <div>
-                <p>Shuaa Misr International Company for Investment and Development is a leading Egyptian joint stock company with an authorized capital of 10 million Egyptian pounds. As a multifaceted organization, the company was established as a natural evolution of extensive expertise across diverse industries. Our operations span a wide range of sectors, enabling us to deliver comprehensive solutions tailored to the needs of our global clientele. Key areas of expertise include:</p>
-                <ul>
-                    <li><strong>International Trade:</strong> Trade of petroleum products, oil well drilling chemicals, and cement.</li>
-                    <li><strong>Logistics Services:</strong> Global freight and customs clearance solutions.</li>
-                    <li><strong>Agricultural Processing:</strong> Sorting, drying, and packing of Egyptian agricultural crops.</li>
-                    <li><strong>Beverage Distribution:</strong> Distribution of natural bottled water.</li>
-                    <li><strong>Advertising Services:</strong> Innovative brand marketing solutions.</li>
-                    <li><strong>Medical Supplies:</strong> High-quality medical equipment supply.</li>
-                    <li><strong>Tourism and Adventure:</strong> Unique desert safari experiences.</li>
-                </ul>
+        <!-- 
+        <div class="relative w-full h-[70vh]">
+            <div class="absolute inset-0 flex items-center justify-center z-10  rounded-2xl">
+                <img class="h-[70vh] w-auto slideAni" src="statics/images/smifid_logo.jpg">
             </div>
+        </div>
+        -->
 
-            <div>
-                <h3>Experience</h3>
-                <p>Our proven track record and deep industry knowledge are reflected in the following core activities:</p>
-                <ul>
-                    <li>International trade of petroleum products and chemicals.</li>
-                    <li>Comprehensive logistics services.</li>
-                    <li>Agricultural crop processing for export.</li>
-                    <li>Premium bottled water distribution.</li>
-                    <li>Medical equipment supply.</li>
-                    <li>Advertising and brand marketing.</li>
-                    <li>Desert safari tourism services.</li>
-                </ul>
-            </div>
 
-            <div>
-                <p>With strategically located branches in Kuwait and the United States of America, operating under the trade name EGCSS, Shuaa Misr has established a strong global presence. Our extensive network of trusted clients and reliable agents enables us to deliver exceptional services across the globe. This international reach, combined with our commitment to excellence, positions us as a preferred partner for businesses and individuals seeking reliable and professional solutions in our areas of expertise.</p>
+        <section class="relative w-full text-lg text-white">
+            <!-- Background Wrapper -->
+            <div class="relative w-full bg-black">
+                <!-- Full-Width Image with Opacity -->
+                <img class="w-full h-auto object-cover opacity-60" src="statics/images/investment.jpg" alt="Investment Image">
+        
+                <!-- Centered Text Overlay -->
+                <div class="absolute inset-0 flex flex-col items-center justify-center px-6 md:px-16 text-left">
+                    <p class="max-w-4xl">
+                        Shuaa Misr International Company for Investment and Development (SMIFID) is a leading Egyptian joint stock company with an authorized capital of 10 million Egyptian pounds. Established as a natural evolution of extensive expertise across multiple industries, we provide comprehensive solutions tailored to global market needs.
+                    </p>
+        
+                    <h3 class="mt-6 text-xl font-semibold">Our Key Sectors</h3>
+                    <ul class="mt-2 space-y-2 list-disc list-inside text-lg">
+                        <li><strong>International Trade:</strong> Petroleum products, oil well drilling chemicals, and cement.</li>
+                        <li><strong>Logistics:</strong> Global freight and customs clearance.</li>
+                        <li><strong>Agricultural Processing:</strong> Sorting, drying, and packaging of Egyptian crops.</li>
+                        <li><strong>Beverage Distribution:</strong> Natural bottled water supply.</li>
+                        <li><strong>Medical Supplies:</strong> High-quality medical equipment.</li>
+                        <li><strong>Tourism & Adventure:</strong> Desert safari experiences.</li>
+                    </ul>
+        
+                    <h3 class="mt-6 text-xl font-semibold">Our Experience</h3>
+                    <p class="mt-2 max-w-3xl">
+                        With a proven track record and deep industry expertise, SMIFID delivers excellence across its diverse operations, ensuring high standards and efficiency in every sector we serve.
+                    </p>
+        
+                    <p class="mt-4 max-w-3xl">
+                        Our global presence extends through strategically located branches in Kuwait and the United States under the trade name EGCSS. Backed by a vast network of trusted clients and reliable partners, we deliver exceptional services worldwide, making us the preferred partner for businesses seeking excellence in international trade, logistics, and beyond.
+                    </p>
+                </div>
             </div>
         </section>
+        
+        
+        
         
 
 
