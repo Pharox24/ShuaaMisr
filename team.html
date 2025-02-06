@@ -9,7 +9,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/png" href="statics/images/smifid_logo.jpg">    </head>
+        <link rel="icon" type="image/png" href="statics/images/smifid_logo.jpg">
+    </head>
     <body class=""> 
 
 
@@ -68,168 +69,133 @@
 
 
         <!-- Our Team Page Section -->
-        <section class="flex-col gap-y-10 justify-center content-center items-center mt-32 mx-32">
-            <div class="flex-col justify-center content-center items-center gap-y-2">
+        <section class="flex flex-col gap-y-10 justify-center items-center mt-32 px-8 md:px-32">
+            <div class="flex flex-col justify-center items-center gap-y-2">
                 <h1 class="text-center text-4xl">Our Team</h1>
-                <hr>
+                <hr class="w-16 border-t-2 border-black">
             </div>
 
-
-            <div class="relative flex gap-x-8 items-center mt-16">
-                <!-- Image container with overlay -->
-                <div class="relative flex-none">
-                    <div class="relative">
-                        <!-- Image with aspect ratio -->
-                        <img class="w-full rounded-2xl min-h-[30vh] h-auto max-h-[60vh] " src="statics/team/mamdouh.jpg">
-                        
-                        <!-- Black overlay with opacity -->
-                        <div class="absolute inset-0 bg-black opacity-20"></div>
-                        
-                        <!-- Heading positioned at bottom -->
-                        <div class="absolute bottom-0 left-0 p-4 text-white text-2xl font-bold">
-                            OUR FOUNDER
+            <!-- Team Members -->
+            <div class="flex flex-wrap md:flex-row gap-16 items-center justify-center mt-16">
+                <!-- Team Member Card -->
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <!-- Image container -->
+                    <div class="relative flex-none">
+                        <div class="relative">
+                            <!-- Image with aspect ratio -->
+                            <img class="w-auto h-[50vh] max-w-xs aspect-[4/5] object-cover rounded-xl border-3 border-black" src="statics/team/mamdouh.jpg">
+                            
+                            <!-- Black overlay with opacity -->
+                            <div class="absolute inset-0 bg-black opacity-20 rounded-xl"></div>
+                            
+                            <!-- Heading positioned at bottom -->
+                            <div class="absolute bottom-0 left-0 p-4 text-white text-2xl font-bold">
+                                OUR FOUNDER
+                            </div>
                         </div>
                     </div>
+                
+                    <!-- Paragraph content -->
+                    <p class="text-gray-700 max-w-lg">
+                        Our management philosophy focuses on maximizing cost competitiveness and continually seeking alternatives that align with market needs. This approach applies to both the products we supply and the services we provide.
+                            We are committed to achieving our customers' goals, prioritizing their success over profitability, while maintaining a reasonable profit margin to ensure sustained growth and prosperity.
+                            These principles are embedded in our company’s constitution, which emphasizes that fostering strong human relations is our ultimate goal, while adhering to the highest standards of quality in both our products and services.
+                        <br><br>
+                        <span class="font-bold">Mamdouh Zayed</span>
+                    </p>
                 </div>
-            
-                <!-- Paragraph content -->
-                <p class="w-auto text-gray-700">
-                    Our management philosophy focuses on maximizing cost competitiveness and continually seeking alternatives that align with market needs. This approach applies to both the products we supply and the services we provide.
-                    We are committed to achieving our customers' goals, prioritizing their success over profitability, while maintaining a reasonable profit margin to ensure sustained growth and prosperity.
-                    These principles are embedded in our company’s constitution, which emphasizes that fostering strong human relations is our ultimate goal, while adhering to the highest standards of quality in both our products and services.
-                    <br><br>
-                    <span class="font-bold">
-                    Mamdouh Zayed
-                    </span>
-                </p>
-            </div>
 
-            <!-- USA branch-->
-            <div class="relative flex gap-x-8 items-center mt-16">
-                <!-- Image container with overlay -->
-                <div class="relative flex-none">
-                    <div class="relative">
-                        <!-- Image with aspect ratio -->
-                        <img class="w-full rounded-2xl min-h-[30vh] h-auto max-h-[60vh] " src="statics/team/micheal.jpeg">
-                        
-                        <!-- Black overlay with opacity -->
-                        <div class="absolute inset-0 bg-black opacity-20"></div>
-                        
-                        <!-- Heading positioned at bottom -->
-                        <div class="absolute bottom-0 left-0 p-4 text-white text-2xl font-bold">
-                            USA Branch
+                <!-- USA Branch -->
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="relative flex-none">
+                        <div class="relative">
+                            <img class="w-auto h-[50vh] max-w-xs aspect-[4/5] object-cover rounded-xl" src="statics/team/micheal.jpeg">
+                            <div class="absolute inset-0 bg-black opacity-20 rounded-xl"></div>
+                            <div class="absolute bottom-0 left-0 p-4 text-white text-2xl font-bold">
+                                USA Branch
+                            </div>
                         </div>
                     </div>
-                </div>
-            
-                <!-- Paragraph content -->
-                <p class="w-auto text-gray-700">
-                    EGCSS LLC USA is a global consulting firm specializing in international trade, affiliated with a network of companies across Kuwait, Egypt, and Dubai. Headquartered in Austin, Texas, EGCSS LLC USA brings over 150 years of combined experience in international trade consultancy
-                    Our mission at EGCSS LLC USA is to empower businesses worldwide by offering expert guidance, in-depth knowledge, and the essential resources needed to navigate the complexities of global trade. We are dedicated to helping our clients maximize the efficiency of their international trade operations, safeguard their interests, and achieve cost and time savings.
-                    At EGCSS LLC USA, we are unwavering in our commitment to delivering the highest level of service and support to our clients. We uphold a policy of integrity, professionalism, and respect for all individuals. We strive relentlessly to ensure our clients’ objectives are met, while maintaining the highest standards of ethical conduct.
-                    <br><br>
-                    <span class="font-bold">
-                        Mike W. Massias
-                    </span>
-                </p>
-            </div>
 
-            
-            <!-- Business Development-->
-            <div class="relative flex gap-x-8 items-center mt-16">
-                <!-- Image container with overlay -->
-                <div class="relative flex-none">
-                    <div class="relative">
-                        <!-- Image with aspect ratio -->
-                        <img class="w-full rounded-2xl h-[60vh]" src="statics/team/mustafa.jpg">
-                        
-                        <!-- Black overlay with opacity -->
-                        <div class="absolute inset-0 bg-black opacity-20"></div>
-                        
-                        <!-- Heading positioned at bottom -->
-                        <div class="absolute bottom-0 left-0 p-4 text-white text-2xl font-bold">
-                            Business Dev.
+                    <p class="text-gray-700 max-w-lg">
+                            EGCSS LLC USA is a global consulting firm specializing in international trade, affiliated with a network of companies across Kuwait, Egypt, and Dubai. Headquartered in Austin, Texas, EGCSS LLC USA brings over 150 years of combined experience in international trade consultancy
+                            Our mission at EGCSS LLC USA is to empower businesses worldwide by offering expert guidance, in-depth knowledge, and the essential resources needed to navigate the complexities of global trade. We are dedicated to helping our clients maximize the efficiency of their international trade operations, safeguard their interests, and achieve cost and time savings.
+                            At EGCSS LLC USA, we are unwavering in our commitment to delivering the highest level of service and support to our clients. We uphold a policy of integrity, professionalism, and respect for all individuals. We strive relentlessly to ensure our clients’ objectives are met, while maintaining the highest standards of ethical conduct.
+                        <br><br>
+                        <span class="font-bold">Mike W. Massias</span>
+                    </p>
+                </div>
+
+                <!-- Business Development -->
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="relative flex-none">
+                        <div class="relative">
+                            <img class="w-auto h-[50vh] max-w-xs aspect-[4/5] object-cover rounded-xl" src="statics/team/mustafa.jpg">
+                            <div class="absolute inset-0 bg-black opacity-20 rounded-xl"></div>
+                            <div class="absolute bottom-0 left-0 p-4 text-white text-2xl font-bold">
+                                Business Dev.
+                            </div>
                         </div>
                     </div>
+
+                    <p class="text-gray-700 max-w-lg">
+                        The Business Development role is fundamental to driving the growth and success of any company. It serves as the strategic locomotive that propels the organization’s activities forward, ensuring alignment with its long-term goals and objectives. As a critical function, business development acts as the key bridge between the company’s targeted niche markets and the internal departments responsible for sales, marketing, and senior management.
+                        A successful business development professional is not only skilled in identifying and capitalizing on new opportunities but also excels at fostering strong relationships with key stakeholders, both internally and externally. By understanding market trends, customer needs, and competitive landscapes, business development professionals provide actionable insights that guide strategic decision-making and contribute to the company’s overall growth trajectory.
+                        In this role, business development collaborates closely with the sales and marketing teams to refine strategies and ensure that offerings are effectively positioned in the market. Moreover, they work with top management to ensure that business development initiatives are aligned with the broader vision of the company, driving sustainable success and profitability.
+                        Ultimately, business development is a catalyst for innovation and expansion, playing a pivotal role in a company’s ability to stay competitive, adapt to changing market dynamics, and achieve long-term success.                <br><br>
+                        <span class="font-bold">Mostafa Khalil</span>
+                    </p>
                 </div>
-            
-                <!-- Paragraph content -->
-                <p class="w-auto text-gray-700">
-                    The Business Development role is fundamental to driving the growth and success of any company. It serves as the strategic locomotive that propels the organization’s activities forward, ensuring alignment with its long-term goals and objectives. As a critical function, business development acts as the key bridge between the company’s targeted niche markets and the internal departments responsible for sales, marketing, and senior management.
-                    A successful business development professional is not only skilled in identifying and capitalizing on new opportunities but also excels at fostering strong relationships with key stakeholders, both internally and externally. By understanding market trends, customer needs, and competitive landscapes, business development professionals provide actionable insights that guide strategic decision-making and contribute to the company’s overall growth trajectory.
-                    In this role, business development collaborates closely with the sales and marketing teams to refine strategies and ensure that offerings are effectively positioned in the market. Moreover, they work with top management to ensure that business development initiatives are aligned with the broader vision of the company, driving sustainable success and profitability.
-                    Ultimately, business development is a catalyst for innovation and expansion, playing a pivotal role in a company’s ability to stay competitive, adapt to changing market dynamics, and achieve long-term success.
-                    <br><br>
-                    <span class="font-bold">
-                        Mostafa Khalil
-                    </span>
-                </p>
-            </div>
 
-
-            <!-- Sales & Distributaion -->
-            <div class="relative flex gap-x-8 items-center mt-16">
-                <!-- Image container with overlay -->
-                <div class="relative flex-none">
-                    <div class="relative">
-                        <!-- Image with aspect ratio -->
-                        <img class="w-full rounded-2xl min-h-[30vh] h-auto max-h-[60vh] " src="statics/team/mamdouh.jpg">
-                        
-                        <!-- Black overlay with opacity -->
-                        <div class="absolute inset-0 bg-black opacity-20"></div>
-                        
-                        <!-- Heading positioned at bottom -->
-                        <div class="absolute bottom-0 left-0 p-4 text-white text-2xl font-bold">
-                            OUR FOUNDER
+                <!-- Sales & Distribution -->
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="relative flex-none">
+                        <div class="relative">
+                            <img class="w-auto h-[50vh] max-w-xs aspect-[4/5] object-cover rounded-xl border-2 border-black" src="statics/team/abdalla.jpg">
+                            <div class="absolute inset-0 bg-black opacity-20 rounded-xl"></div>
+                            <div class="absolute bottom-0 left-0 p-4 text-white text-2xl font-bold">
+                                Sales & Distribution
+                            </div>
                         </div>
                     </div>
+
+                    <p class="text-gray-700 max-w-lg">
+                        Shuaa Misr International Company for Investment and Development (SMIFID) is a diversified enterprise engaged in a wide range of supply chain activities, catering to factories, retailers, wholesalers, and end consumers, both locally and internationally. Our expertise extends across multiple industries, ensuring the efficient sourcing, distribution, and export of high-quality products to various markets.
+                            SMIFID specializes in the supply and export of petroleum-based products, including diesel, coal, and drilling materials such as chemicals and machinery. Additionally, we provide agricultural products, including legumes, fertilizers, and plant-based commodities, along with a variety of foodstuffs for local and international distribution.
+                            Our company is also a trusted supplier of mineral water and holds exclusive agency rights for multiple internationally recognized brands of bottled natural water, meeting the highest global standards and approved by regulatory authorities both locally and abroad.
+                            Beyond product distribution, SMIFID offers integration solutions, enabling businesses to expand their reach and connect with consumers worldwide. Through our extensive network and industry expertise, we facilitate seamless access to global markets, ensuring efficiency, quality, and competitive advantage for our partners.
+                        <br><br>
+                        <span class="font-bold">Abdalla Zayed</span>
+                    </p>
                 </div>
-            
-                <!-- Paragraph content -->
-                <p class="w-auto text-gray-700">
-                    Our management philosophy focuses on maximizing cost competitiveness and continually seeking alternatives that align with market needs. This approach applies to both the products we supply and the services we provide.
-                    We are committed to achieving our customers' goals, prioritizing their success over profitability, while maintaining a reasonable profit margin to ensure sustained growth and prosperity.
-                    These principles are embedded in our company’s constitution, which emphasizes that fostering strong human relations is our ultimate goal, while adhering to the highest standards of quality in both our products and services.
-                    <br><br>
-                    <span class="font-bold">
-                    Mamdouh Zayed
-                    </span>
-                </p>
-            </div>
 
 
-            <!-- Custum Clearance -->
-            <div class="relative flex gap-x-8 items-center mt-16">
-                <!-- Image container with overlay -->
-                <div class="relative flex-none">
-                    <div class="relative">
-                        <!-- Image with aspect ratio -->
-                        <img class="w-full rounded-2xl min-h-[30vh] h-auto max-h-[60vh] " src="statics/team/mamdouh.jpg">
-                        
-                        <!-- Black overlay with opacity -->
-                        <div class="absolute inset-0 bg-black opacity-20"></div>
-                        
-                        <!-- Heading positioned at bottom -->
-                        <div class="absolute bottom-0 left-0 p-4 text-white text-2xl font-bold">
-                            OUR FOUNDER
+                <!-- Custom Clearance -->
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="relative flex-none">
+                        <div class="relative">
+                            <img class="w-auto h-[50vh] max-w-xs aspect-[4/5] object-cover rounded-xl border-2 border-black" src="statics/team/mahmoud.jpeg">
+                            <div class="absolute inset-0 bg-black opacity-20 rounded-xl"></div>
+                            <div class="absolute bottom-0 left-0 p-4 text-white text-2xl font-bold">
+                                Custom Clearance
+                            </div>
                         </div>
                     </div>
+
+                    <p class="text-gray-700 max-w-lg">
+                        Customs clearance plays a critical role in the success of companies, particularly industrial enterprises. A lack of understanding of the procedures, requirements, and regulations governing the import and export of goods can lead to costly errors, delays, and increased expenses for both raw materials and finished products—costs that ultimately impact the end consumer.
+                        At our company, we are committed to minimizing these costs while ensuring a seamless customs clearance process. Our goal is to provide our clients with efficient, reliable service, reinforcing our role as strategic partners in their success.
+                        <br><br>
+                        <span class="font-bold">Mahmoud Elshahat</span>
+                    </p>
                 </div>
-            
-                <!-- Paragraph content -->
-                <p class="w-auto text-gray-700">
-                    Our management philosophy focuses on maximizing cost competitiveness and continually seeking alternatives that align with market needs. This approach applies to both the products we supply and the services we provide.
-                    We are committed to achieving our customers' goals, prioritizing their success over profitability, while maintaining a reasonable profit margin to ensure sustained growth and prosperity.
-                    These principles are embedded in our company’s constitution, which emphasizes that fostering strong human relations is our ultimate goal, while adhering to the highest standards of quality in both our products and services.
-                    <br><br>
-                    <span class="font-bold">
-                    Mamdouh Zayed
-                    </span>
-                </p>
             </div>
-
-
         </section>
+
+
+
+
+
 
 
           <!--
