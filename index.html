@@ -1,247 +1,90 @@
+<!DOCTYPE hmtl>
 
-<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>SMIFID</title>
-        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/png" href="statics/images/smifid_logo.jpg">
+        <title>SMIFID Gate</title>
+        <meta name="description" content="">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style_gate.css">
+        <link rel="icon" type="png" href="statics_gate/images/smifid_logo.jpg">
+        <script src="logic.js"></script>
         <style>
-            body {
+            html, body {
+                overflow-x: 0;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                overflow: auto;
             }
         </style>
     </head>
-    <!-- sm:text-yellow-300 md:text-green-400 lg:text-blue-300 xl:text-orange-500 2xl:text-indigo-600 -->
-    <body class="flex-col justify-center items-center content-center text-black"> 
 
 
-        <!-- Navbar -->
-        <nav class="bg-blue-900 shadow-md mx-4 mt-4 py-1 rounded-2xl">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-center h-16">
-                    <!-- Logo / Home Link -->
-                    <div class="flex-shrink-0">
-                        <a id="home_link" target="_blank" href="https://www.egcss.com" class="text-xl font-bold text-white hover:animate-pulse">
-                            SMIFID & CO
-                        </a>
-                    </div>
+    <body class="flex-grow" style="background-color: #F7F7F7;">
 
-                    <!-- Mobile Menu Button -->
-                    <div class="md:hidden">
-                        <button id="menu-btn" class="text-white focus:outline-none">
-                            <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
-                            </svg>
-                        </button>
-                    </div>
 
-                    <!-- Menu Items (Hidden on mobile, shown on larger screens) -->
-                    <div class="hidden md:flex space-x-6 font-bold">
-                        <a href="index.html" class="text-blue-800 bg-white rounded-xl p-2  hover:animate-pulse transition duration-300">Home</a>
-                        <a href="about.html" class="text-white  p-2 hover:animate-pulse transition duration-300">About Us</a>
-                        <a href="team.html" class="text-white  p-2 hover:animate-pulse transition duration-300">Our Team</a>
-                        <a href="contact.html" class="text-white  p-2 hover:animate-pulse transition duration-300">Contact Us</a>
-                        <a href="portfolio.html" class="text-white  p-2 hover:animate-pulse transition duration-300">Portfolio</a>
-                    </div>
-                </div>
+    <!-- Main Container -->
+    <div class="w-full min-h-screen flex flex-col items-center justify-center">
+
+        <!-- Website Logo -->
+        <div class="flex-grow flex flex-col items-center justify-center text-white w-full px-4">
+            <img class="w-auto max-h-72 md:h-96" src="statics_gate/images/smifid_logo.jpg" alt="EGCSS Pictographic Logo">
+
+            <!-- Links Container -->
+            <div class="flex flex-wrap gap-4 justify-center items-center w-full max-w-screen-lg mt-8">
+
+                <!-- SMIFID (Main Page) -->
+                <a href="#" class="flex flex-col items-center justify-center p-4 bg-gray-800 hover:bg-blue-900 rounded-xl text-2xl w-40 text-center pulse-effect">
+                    <img class="w-16 h-auto mb-2" src="statics_gate/svgs/globe.svg" alt="">
+                    <h2>SMIFID</h2>
+                </a>
+
+                <!-- EGCSS Kuwait (Logistics) -->
+                <a href="https://www.egcss.com" target="_blank" class="flex flex-col items-center justify-center p-4 bg-gray-800 hover:bg-blue-900 rounded-xl text-2xl w-40 text-center pulse-effect">
+                    <img class="w-16 h-auto mb-2" src="statics_gate/svgs/truck.svg" alt="">
+                    <h2>Logistics</h2>
+                </a>
+
+                <!-- EGCSS USA (Trade) -->
+                <a href="https://www.egcss.net" target="_blank" class="flex flex-col items-center justify-center p-4 bg-gray-800 hover:bg-blue-900 rounded-xl text-2xl w-40 text-center pulse-effect">
+                    <img class="w-16 h-auto mb-2" src="statics_gate/svgs/usa_flag.svg" alt="">
+                    <h2>Trade</h2>
+                </a>
+
+                <!-- Energy -->
+                <a class="flex flex-col items-center justify-center p-4 bg-gray-800 hover:bg-blue-900 rounded-xl text-2xl w-40 text-center pulse-effect">
+                    <img class="w-16 h-auto mb-2" src="statics_gate/svgs/oil_rig.svg" alt="">
+                    <h2>Energy</h2>
+                </a>
+
+                <!-- VFSA Egypt (Employment) -->
+                <a href="https://www.vfsa.site" target="_blank" class="flex flex-col items-center justify-center p-4 bg-gray-800 hover:bg-blue-900 rounded-xl text-2xl w-40 text-center pulse-effect">
+                    <img class="w-16 h-auto mb-2" src="statics_gate/svgs/passport.svg" alt="">
+                    <h2>Employment</h2>
+                </a>
+
             </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 bg-blue-500 px-4 py-2">
-                <a href="index.html" class="text-white  hover:animate-pulse transition duration-300">Home</a>
-                <a href="about.html" class="text-white  hover:animate-pulse transition duration-300">About Us</a>
-                <a href="portfolio.html" class="text-white  hover:animate-pulse transition duration-300">Portfolio</a>
-                <a href="team.html" class="text-white  hover:animate-pulse transition duration-300">Our Team</a>
-                <a href="contact.html" class="text-white  hover:animate-pulse transition duration-300">Contact Us</a>
-            </div>
-        </nav>
-
-        <!-- JavaScript for Mobile Menu -->
-        <script>
-            const menuBtn = document.getElementById('menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        </script>
-
-        
-        
-        <div class="px-4 sm:px-10 lg:px-52">
-            <section class="mt-10">
-                <!-- Title and Logo -->
-                <div class="flex flex-wrap md:flex-nowrap items-center justify-between gap-6">
-                    <!-- Title & Description -->
-                    <div class="flex-1">
-                        <h1 class="text-5xl sm:text-6xl font-semibold">
-                            <span class="text-blue-700">SHUAA</span> <span class="text-red-700">MISR</span>
-                        </h1>
-                        <h2 class="text-xl sm:text-2xl text-gray-700 mt-4">
-                            Shuaa Misr For Investment & Development S.A.E
-                        </h2>
-                    </div>
-        
-                    <!-- Logo -->
-                    <div class="flex-shrink-0">
-                        <img class="w-20 sm:w-28 md:w-36 lg:w-40 xl:w-48 rounded-xl" 
-                             src="statics/images/smifid_logo.jpg" 
-                             alt="Shuaa Misr Logo">
-                    </div>
-                </div>
-        
-                <!-- Description Section -->
-                <div class="mt-10">
-                    <p class="text-base sm:text-lg lg:text-xl text-gray-800 leading-relaxed">
-                        Welcome to Shuaa Misr International for Investment & Development S.A.E., a leading Egyptian company with a strong presence in international trading and logistics. With years of experience in the industry, we have established ourselves as a trusted partner in global markets, providing high-quality services and solutions tailored to the needs of our clients. Our branches in Kuwait and the USA enable us to expand our reach and operate seamlessly across different regions.
-                    </p>
-                    <p class="text-base sm:text-lg lg:text-xl text-gray-800 mt-4 leading-relaxed">
-                        Our diverse business portfolio covers a wide range of industries, including oil drilling contracting, oil field chemicals, fertilizers, logistics, and international trading. We specialize in the supply of diesel and petrol, ensuring reliable energy solutions, and we take pride in exporting premium-quality Egyptian fruits to international markets. With a commitment to excellence, innovation, and customer satisfaction, we strive to contribute to economic growth and strengthen trade connections worldwide.
-                    </p>
-                </div>
-        
-                <!-- Horizontal Line -->
-                <hr class="mt-10 border-t-2 border-gray-300">
-            </section>
         </div>
 
-
-        <!-- Our Business Portfolio-->
-        <section class="flex flex-wrap justify-center gap-6 mt-10">
-            <!-- Oil Rig -->
-            <a href="portfolio.html" class="border-2 border-black rounded-4xl flex flex-col justify-center items-center p-4 w-28 sm:w-36 md:w-40 lg:w-48 xl:w-56 transition-transform transform hover:scale-110 hover:shadow-xl">
-                <img class="h-32 w-auto" src="statics/svgs/oil_rig.svg" alt="Oil Rig">
-                <h2 class="text-center mt-4 text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-800">Oil Rig</h2>
-            </a>
-
-            <!-- Diesel Processing -->
-            <a href="portfolio.html" class="border-2 border-black rounded-4xl flex flex-col justify-center items-center p-4 w-28 sm:w-36 md:w-40 lg:w-48 xl:w-56 transition-transform transform hover:scale-110 hover:shadow-xl">
-                <img class="h-32 w-auto" src="statics/svgs/diesel.svg" alt="Diesel Processing">
-                <h2 class="text-center mt-4 text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-800">Diesel Processing</h2>
-            </a>
-
-            <!-- Fertilizers -->
-            <a href="portfolio.html" class="border-2 border-black rounded-4xl flex flex-col justify-center items-center p-4 w-28 sm:w-36 md:w-40 lg:w-48 xl:w-56 transition-transform transform hover:scale-110 hover:shadow-xl">
-                <img class="h-32 w-auto" src="statics/svgs/fertilizer3.svg" alt="Fertilizers">
-                <h2 class="text-center mt-4 text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-800">Fertilizers</h2>
-            </a>
-
-            <!-- International Trade -->
-            <a href="portfolio.html" class="border-2 border-black rounded-4xl flex flex-col justify-center items-center p-4 w-28 sm:w-36 md:w-40 lg:w-48 xl:w-56 transition-transform transform hover:scale-110 hover:shadow-xl">
-                <img class="h-32 w-auto" src="statics/svgs/global_market.svg" alt="International Trade">
-                <h2 class="text-center mt-4 text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-800">International Trade</h2>
-            </a>
-
-            <!-- Logistics Solutions -->
-            <a href="portfolio.html" class="border-2 border-black rounded-4xl flex flex-col justify-center items-center p-4 w-28 sm:w-36 md:w-40 lg:w-48 xl:w-56 transition-transform transform hover:scale-110 hover:shadow-xl">
-                <img class="h-32 w-auto" src="statics/svgs/shipping.svg" alt="Logistics Solutions">
-                <h2 class="text-center mt-4 text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-800">Logistics Solutions</h2>
-            </a>
-
-            <!-- Oil Chemicals Processing -->
-            <a href="portfolio.html" class="border-2 border-black rounded-4xl flex flex-col justify-center items-center p-4 w-28 sm:w-36 md:w-40 lg:w-48 xl:w-56 transition-transform transform hover:scale-110 hover:shadow-xl">
-                <img class="h-32 w-auto" src="statics/svgs/petrochem.svg" alt="Oil Chemicals Processing">
-                <h2 class="text-center mt-4 text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-800">Oil Chemicals Processing</h2>
-            </a>
-
-            <!-- Vietnamese Rice -->
-            <a href="portfolio.html" class="border-2 border-black rounded-4xl flex flex-col justify-center items-center p-4 w-28 sm:w-36 md:w-40 lg:w-48 xl:w-56 transition-transform transform hover:scale-110 hover:shadow-xl">
-                <img class="h-32 w-auto" src="statics/svgs/grain.svg" alt="Vietnamese Rice">
-                <h2 class="text-center mt-4 text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-800">Vietnamese Rice</h2>
-            </a>
-        </section>
-
-        
-
-        <!-- Footer Section -->
-        <footer class="bg-blue-900 w-full min-h-[40vh] h-auto max-h-screen mt-12">
-            <div class="container mx-auto px-4 py-8">
-                <div class="flex flex-col md:flex-row gap-8 justify-between">
-                    <!-- Contact Us -->
-                    <div class="text-white">
-                        <h1 class="text-xl font-bold">Our Location</h1>
-                        <div class="text-base">
-                            <ul>
-                                <li>
-                                    Apt. #1, Bldg  #7,<br> Omar Ibn El Khattab St.<br> Mog #12, 10 Ramadan City, <br> 44637 EGYPT.
-                                </li>
-                                <div class="mt-3">
-                                    <li>
-                                        Phone:   +20 55 4365 911
-                                    </li>
-                                    <li>
-                                        Cellular: +20 10 0304 6969
-                                    </li>
-                                    <li>
-                                        inquiry@shuaamisr.com 
-                                    </li>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Help & Support -->
-                    <div class="text-white">
-                        <h1 class="text-xl font-bold">Help & Support</h1>
-                        <div>
-                            <ul>
-                                <li>Land/Sea/Air Freight</li>
-                                <li>Customs Clearance Agent</li>
-                                <li>From/To Anywhere</li>
-                                <li>International Trading</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Contact Us -->
-                    <div class="text-white">
-                        <h1 class="text-xl font-bold">Contact Us</h1>
-                        <div>
-                            <ul>
-                                <li>
-                                    Phone:   +20 55 4365 911
-                                </li>
-                                <li>
-                                    Cellular: +20 10 0304 6969
-                                </li>
-                                <li>
-                                    inquiry@shuaamisr.com 
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Copyright and Terms of Service Section -->
-            <div class="bg-blue-200 w-full h-auto md:h-[15vh] flex flex-col md:flex-row items-center justify-between text-lg px-4 py-4 md:px-8">
-                <h1 class="text-center md:text-left mb-4 md:mb-0">Copyright ShuaaMisr All Rights Reserved</h1>
-                <a class="hover:text-blue-400 hover:underline text-center md:text-right" href="TOS.html" target="_blank">Terms Of Service</a>
+        <!-- Footer -->
+        <footer class="bg-black w-full py-8 mt-10">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-xl md:text-2xl text-white text-center py-4">
+                <h1 id="copyText" onclick="copyToClipboard()" class="px-4 hover:text-blue-500 cursor-pointer hover:underline">
+                    inquiry@shuaamisr.com
+                </h1>
+                <h1 id="copyText2" onclick="copyToClipboard2()" class="px-4 hover:text-blue-500 cursor-pointer hover:underline">
+                    (+20) 1003046969
+                </h1>
+                <h1 class="px-4">© 2017</h1>
             </div>
         </footer>
 
+    </div>
 
 
-        <script>
-
-            document.getElementById("twitter_link").addEventListener('click', () => {
-                console.log("twitter link works");
-                alert("Our Twitter is temporatily inactive");
-            });
-
-
-            function addEventList(id, action) {
-                document.getElementById(id).addEventListener('click', () => {
-                    action();
-                });
-            }
-        </script>
-        
-        <script src="" async defer></script>
     </body>
-</html>
 
+
+</html>
