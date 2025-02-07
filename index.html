@@ -1,0 +1,90 @@
+<!DOCTYPE hmtl>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SMIFID Gate</title>
+        <meta name="description" content="">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style_gate.css">
+        <link rel="icon" type="png" href="statics_gate/images/smifid_logo.jpg">
+        <script src="logic.js"></script>
+        <style>
+            html, body {
+                overflow-x: 0;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                overflow: auto;
+            }
+        </style>
+    </head>
+
+
+    <body class="flex-grow" style="background-color: #F7F7F7;">
+
+
+    <!-- Main Container -->
+    <div class="w-full min-h-screen flex flex-col items-center justify-center">
+
+        <!-- Website Logo -->
+        <div class="flex-grow flex flex-col items-center justify-center text-white w-full px-4">
+            <img class="w-auto max-h-72 md:h-96" src="statics_gate/images/smifid_logo.jpg" alt="EGCSS Pictographic Logo">
+
+            <!-- Links Container -->
+            <div class="flex flex-wrap gap-4 justify-center items-center w-full max-w-screen-lg mt-8">
+
+                <!-- SMIFID (Main Page) -->
+                <a href="home.html" target="_blank" class="flex flex-col items-center justify-center p-4 bg-gray-800 hover:bg-blue-900 rounded-xl text-2xl w-40 text-center pulse-effect">
+                    <img class="w-16 h-auto mb-2" src="statics_gate/svgs/globe.svg" alt="">
+                    <h2>SMIFID</h2>
+                </a>
+
+                <!-- EGCSS Kuwait (Logistics) -->
+                <a href="https://www.egcss.com" target="_blank" class="flex flex-col items-center justify-center p-4 bg-gray-800 hover:bg-blue-900 rounded-xl text-2xl w-40 text-center pulse-effect">
+                    <img class="w-16 h-auto mb-2" src="statics_gate/svgs/truck.svg" alt="">
+                    <h2>Logistics</h2>
+                </a>
+
+                <!-- EGCSS USA (Trade) -->
+                <a href="https://www.egcss.net" target="_blank" class="flex flex-col items-center justify-center p-4 bg-gray-800 hover:bg-blue-900 rounded-xl text-2xl w-40 text-center pulse-effect">
+                    <img class="w-16 h-auto mb-2" src="statics_gate/svgs/usa_flag.svg" alt="">
+                    <h2>Trade</h2>
+                </a>
+
+                <!-- Energy -->
+                <a href="portfolio.html" target="_blank" class="flex flex-col items-center justify-center p-4 bg-gray-800 hover:bg-blue-900 rounded-xl text-2xl w-40 text-center pulse-effect">
+                    <img class="w-16 h-auto mb-2" src="statics_gate/svgs/oil_rig.svg" alt="">
+                    <h2>Energy</h2>
+                </a>
+
+                <!-- VFSA Egypt (Employment) -->
+                <a href="https://www.vfsa.site" target="_blank" class="flex flex-col items-center justify-center p-4 bg-gray-800 hover:bg-blue-900 rounded-xl text-2xl w-40 text-center pulse-effect">
+                    <img class="w-16 h-auto mb-2" src="statics_gate/svgs/passport.svg" alt="">
+                    <h2>Employment</h2>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-black w-full py-8 mt-10">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-xl md:text-2xl text-white text-center py-4">
+                <h1 id="copyText" onclick="copyToClipboard()" class="px-4 hover:text-blue-500 cursor-pointer hover:underline">
+                    inquiry@shuaamisr.com
+                </h1>
+                <h1 id="copyText2" onclick="copyToClipboard2()" class="px-4 hover:text-blue-500 cursor-pointer hover:underline">
+                    (+20) 1003046969
+                </h1>
+                <h1 class="px-4">© 2017</h1>
+            </div>
+        </footer>
+
+    </div>
+
+
+    </body>
+
+
+</html>
