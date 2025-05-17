@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>About Us</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="statics/images/smifid_logo.jpg">
+        <style>
+        </style>
+    </head>
+    <body class=""> 
+
+
+        <!-- Navbar -->
+        <nav class="mx-3 bg-blue-900 shadow-md mt-4 py-1 rounded-2xl z-30 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo / Home Link -->
+                    <div class="flex-shrink-0">
+                        <a id="home_link" target="_blank" href="https://www.shuaamisr.com" class="text-xl font-bold text-white hover:animate-pulse">
+                            SMIFID Group
+                        </a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="md:hidden">
+                        <button id="menu-btn" class="text-white focus:outline-none">
+                            <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Menu Items (Hidden on mobile, shown on larger screens) -->
+                    <div class="hidden md:flex space-x-6 font-bold text-white">
+                        <a href="home.html" class="text-white p-2 hover:animate-pulse transition duration-300">Home</a>
+                        <a href="about.html" class="text-blue-800 bg-white rounded-xl p-2 hover:animate-pulse transition duration-300">About Us</a>
+                        <a href="team.html" class="text-white p-2 hover:animate-pulse transition duration-300">Our Team</a>
+                        <a href="contact.html" class="text-white p-2 hover:animate-pulse transition duration-300">Contact Us</a>
+                        <a href="portfolio.html" class="text-white p-2 hover:animate-pulse transition duration-300">Portfolio</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 bg-blue-500 px-4 py-2">
+                <a href="home.html" class="text-white hover:animate-pulse transition duration-300">Home</a>
+                <a href="about.html" class="text-white hover:animate-pulse transition duration-300">About Us</a>
+                <a href="team.html" class="text-white hover:animate-pulse transition duration-300">Our Team</a>
+                <a href="contact.html" class="text-white hover:animate-pulse transition duration-300">Contact Us</a>
+                <a href="portfolio.html" class="text-white hover:animate-pulse transition duration-300">Portfolio</a>
+            </div>
+        </nav>
+
+        <!-- JavaScript for Mobile Menu -->
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+
+
+        <!-- Main Page Logo & Animation -->
+        <div class="relative w-full h-[70vh] overflow-hidden">
+            <!-- Logo container -->
+            <div class="absolute inset-0 flex items-center justify-center z-20 p-4">
+                <img class="w-3/4 sm:w-1/2 lg:w-1/3 slideAni max-w-full max-h-full slideAni" 
+                    src="statics/images/smifid_logo.jpg" 
+                    alt="VFSA Logo">
+            </div>
+        </div>
+
+        <!-- 
+        <div class="relative w-full h-[70vh]">
+            <div class="absolute inset-0 flex items-center justify-center z-10  rounded-2xl">
+                <img class="h-[70vh] w-auto slideAni" src="statics/images/smifid_logo.jpg">
+            </div>
+        </div>
+        -->
+
+        <div class="flex justify-center content-center items-center gap-x-4">
+            <!-- Content -->
+            <div class="text-base m-6">
+                <p class="max-w-3xl text-center md:text-left">
+                    Shuaa Misr International Company for Investment and Development (SMIFID) is a leading Egyptian joint stock company with an authorized capital of 10 million Egyptian pounds. Established as a natural evolution of extensive expertise across multiple industries, we provide comprehensive solutions tailored to global market needs.
+                </p>
+    
+                <div class="flex gap-x-3 mt-10">
+                    <img class="h-12 w-auto" src="statics/svgs/work_site.svg">
+                    <h3 class="mt-4 text-xl font-semibold text-center md:text-left">Our Key Sectors</h3>
+                </div>
+                <ul class="mt-2 space-y-2 list-disc list-inside text-lg max-w-3xl">
+                    <li><strong>International Trade:</strong> Petroleum products, oil well drilling chemicals, and cement.</li>
+                    <li><strong>Logistics:</strong> Global freight and customs clearance.</li>
+                    <li><strong>Agricultural Processing:</strong> Sorting, drying, and packaging of Egyptian crops.</li>
+                    <li><strong>Beverage Distribution:</strong> Natural bottled water supply.</li>
+                    <li><strong>Medical Supplies:</strong> High-quality medical equipment.</li>
+                    <li><strong>Tourism & Adventure:</strong> Desert safari experiences.</li>
+                </ul>
+    
+
+                <div class="flex gap-x-3 mt-10">
+                    <img class="h-12 w-auto" src="statics/svgs/experience.svg">
+                    <h3 class="mt-4 text-xl font-semibold text-center md:text-left">Our Experience</h3>
+                </div>
+                <p class="max-w-3xl text-center md:text-left mt-2">
+                    With a proven track record and deep industry expertise, SMIFID delivers excellence across its diverse operations, ensuring high standards and efficiency in every sector we serve.
+                </p>
+    
+                <p class="max-w-3xl text-center md:text-left">
+                    Our global presence extends through strategically located branches in Kuwait and the United States under the trade name EGCSS. Backed by a vast network of trusted clients and reliable partners, we deliver exceptional services worldwide, making us the preferred partner for businesses seeking excellence in international trade, logistics, and beyond.
+                </p>
+            </div>
+
+             <!--<img class="rounded-xl h-[80vh] m-5 object-cover w-[50vw]" src="statics/images/investment.jpg"> -->
+        </div>
+
+
+
+   
+
+        <!-- Footer Section -->
+        <footer class="bg-blue-900 w-full min-h-[40vh] h-auto max-h-screen mt-12">
+            <div class="container mx-auto px-4 py-8">
+                <div class="flex flex-col md:flex-row gap-8 justify-between">
+                    <!-- Contact Us -->
+                    <div class="text-white">
+                        <h1 class="text-xl font-bold">Our Location</h1>
+                        <div class="text-base">
+                            <ul>
+                                <li>
+                                    Apt. #1, Bldg  #7,<br> Omar Ibn El Khattab St.<br> Mog #12, 10 Ramadan City, <br> 44637 EGYPT.
+                                </li>
+                                <div class="mt-3">
+                                    <li>
+                                        Phone:   +20 55 4365 911
+                                    </li>
+                                    <li>
+                                        Cellular: +20 10 0304 6969
+                                    </li>
+                                    <li>
+                                        inquiry@shuaamisr.com 
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Help & Support -->
+                    <div class="text-white">
+                        <h1 class="text-xl font-bold">Help & Support</h1>
+                        <div>
+                            <ul>
+                                <li>Land/Sea/Air Freight</li>
+                                <li>Customs Clearance Agent</li>
+                                <li>From/To Anywhere</li>
+                                <li>International Trading</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Us -->
+                    <div class="text-white">
+                        <h1 class="text-xl font-bold">Contact Us</h1>
+                        <div>
+                            <ul>
+                                <li>
+                                    Phone:   +20 55 4365 911
+                                </li>
+                                <li>
+                                    Cellular: +20 10 0304 6969
+                                </li>
+                                <li>
+                                    inquiry@shuaamisr.com 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright and Terms of Service Section -->
+            <div class="bg-blue-100 w-full h-auto md:h-[15vh] flex flex-col md:flex-row items-center justify-between text-lg px-4 py-4 md:px-8">
+                <h1 class="text-center md:text-left mb-4 md:mb-0">Copyright ShuaaMisr All Rights Reserved</h1>
+                <a class="hover:text-blue-400 hover:underline text-center md:text-right" href="TOS.html" target="_blank">Terms Of Service</a>
+            </div>
+        </footer>
+        
+        
+
+        <script>
+            function addEventList(id, action) {
+                document.getElementById(id).addEventListener('click', () => {
+                    action();
+                });
+            }
+        </script>
+        
+        <script src="" async defer></script>
+    </body>
+</html>

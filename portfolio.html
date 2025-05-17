@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Our Portfolio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="statics/images/smifid_logo.jpg">
+        <style>
+            /* Custom CSS for animations */
+            .fade-in {
+                animation: fadeIn 0.5s ease-in-out;
+            }
+    
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+    
+            .slide-in-left {
+                animation: slideInLeft 0.5s ease-in-out;
+            }
+    
+            @keyframes slideInLeft {
+                from { transform: translateX(-100%); }
+                to { transform: translateX(0); }
+            }
+    
+            .slide-in-right {
+                animation: slideInRight 0.5s ease-in-out;
+            }
+    
+            @keyframes slideInRight {
+                from { transform: translateX(100%); }
+                to { transform: translateX(0); }
+            }
+        </style>
+        
+    </head>
+    <body class=""> 
+
+
+        <!-- Navbar -->
+        <nav class="bg-blue-900 shadow-md mx-4 mt-4 py-1 rounded-2xl">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo / Home Link -->
+                    <div class="flex-shrink-0">
+                        <a id="home_link" target="_blank" href="https://www.shuaamisr.com" class="text-xl font-bold text-white hover:animate-pulse">
+                            SMIFID Group
+                        </a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="md:hidden">
+                        <button id="menu-btn" class="text-white focus:outline-none">
+                            <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Menu Items (Hidden on mobile, shown on larger screens) -->
+                    <div class="hidden md:flex space-x-6 font-bold">
+                        <a href="home.html" class="text-white p-2  hover:animate-pulse transition duration-300">Home</a>
+                        <a href="about.html" class="text-white  p-2 hover:animate-pulse transition duration-300">About Us</a>
+                        <a href="team.html" class="text-white  p-2 hover:animate-pulse transition duration-300">Our Team</a>
+                        <a href="contact.html" class="text-white  p-2 hover:animate-pulse transition duration-300">Contact Us</a>
+                        <a href="portfolio.html" class="text-blue-800 bg-white rounded-xl  p-2 hover:animate-pulse transition duration-300">Portfolio</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 bg-blue-500 px-4 py-2">
+                <a href="home.html" class="text-white  hover:animate-pulse transition duration-300">Home</a>
+                <a href="about.html" class="text-white  hover:animate-pulse transition duration-300">About Us</a>
+                <a href="team.html" class="text-white  hover:animate-pulse transition duration-300">Our Team</a>
+                <a href="contact.html" class="text-white  hover:animate-pulse transition duration-300">Contact Us</a>
+                <a href="portfolio.html" class="text-white  hover:animate-pulse transition duration-300">Portfolio</a>
+                
+            </div>
+        </nav>
+
+        <!-- JavaScript for Mobile Menu -->
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+
+
+
+        <!-- Main Page Content -->
+        <section class="text-left mt-10 mx-4 sm:mx-10 lg:mx-52">
+
+            <h2 class="text-2xl mt-3">
+                About Us
+            </h2>
+            <p>
+                With over 20 years of industry expertise, our company is a leading force in multiple sectors, delivering excellence and innovation in every project we undertake. Based in Egypt, with established branches in the United States and Kuwait, we provide top-tier services in oil drilling contracting, fertilizers, petrochemicals, Vietnamese rice, logistics, international trading, and diesel. Our commitment to quality, efficiency, and sustainable solutions sets us apart as a trusted partner in global markets.
+            </p>
+        </section>
+
+
+        <!-- Slideshow Outer Containe -->
+        <div class="text-white ">
+            <!-- Slideshow Container -->
+            <section id="slideshow-container" class="relative h-screen w-full mt-16 flex justify-center items-center">
+                <div class="h-[90vh] w-[90vw] overflow-hidden rounded-xl shadow-2xl bg-black">
+                    <img id="slideshow-img" class="rounded-xl h-[90vh] w-[90vw] opacity-60 object-cover transition-transform duration-500 hover:scale-105" src="" alt="Slideshow Image">
+
+                    <!-- Text Overlay -->
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-center bg-opacity-50 p-8 mx-16">
+                        <h2 id="slideshow-title" class="text-6xl font-bold mb-4 slide-in-left"></h2>
+                        <p id="slideshow-paragraph" class="text-3xl slide-in-right"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation Buttons -->
+            <div class="flex justify-center items-center gap-x-12 text-white text-2xl">
+                    <button onclick="prevSlide()" id="prev_img_btn" class="bg-black rounded-2xl p-3 hover:bg-blue-500 transition-colors duration-300 transform hover:scale-110">
+                        <
+                    </button>
+                    <button onclick="nextSlide()" id="next_img_btn" class="bg-black rounded-2xl p-3 hover:bg-blue-500 transition-colors duration-300 transform hover:scale-110">
+                        >
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer Section -->
+        <footer class="bg-blue-900 w-full min-h-[40vh] h-auto max-h-screen mt-12">
+            <div class="container mx-auto px-4 py-8">
+                <div class="flex flex-col md:flex-row gap-8 justify-between">
+                    <!-- Contact Us -->
+                    <div class="text-white">
+                        <h1 class="text-xl font-bold">Our Location</h1>
+                        <div class="text-base">
+                            <ul>
+                                <li>
+                                    Apt. #1, Bldg  #7,<br> Omar Ibn El Khattab St.<br> Mog #12, 10 Ramadan City, <br> 44637 EGYPT.
+                                </li>
+                                <div class="mt-3">
+                                    <li>
+                                        Phone:   +20 55 4365 911
+                                    </li>
+                                    <li>
+                                        Cellular: +20 10 0304 6969
+                                    </li>
+                                    <li>
+                                        inquiry@shuaamisr.com 
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Help & Support -->
+                    <div class="text-white">
+                        <h1 class="text-xl font-bold">Help & Support</h1>
+                        <div>
+                            <ul>
+                                <li>Land/Sea/Air Freight</li>
+                                <li>Customs Clearance Agent</li>
+                                <li>From/To Anywhere</li>
+                                <li>International Trading</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Us -->
+                    <div class="text-white">
+                        <h1 class="text-xl font-bold">Contact Us</h1>
+                        <div>
+                            <ul>
+                                <li>
+                                    Phone:   +20 55 4365 911
+                                </li>
+                                <li>
+                                    Cellular: +20 10 0304 6969
+                                </li>
+                                <li>
+                                    inquiry@shuaamisr.com 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright and Terms of Service Section -->
+            <div class="bg-blue-100 w-full h-auto md:h-[15vh] flex flex-col md:flex-row items-center justify-between text-lg px-4 py-4 md:px-8">
+                <h1 class="text-center md:text-left mb-4 md:mb-0">Copyright ShuaaMisr All Rights Reserved</h1>
+                <a class="hover:text-blue-400 hover:underline text-center md:text-right" href="TOS.html" target="_blank">Terms Of Service</a>
+            </div>
+        </footer>
+        
+        
+        <script src="logic.js" async defer></script>
+    </body>
+</html>
